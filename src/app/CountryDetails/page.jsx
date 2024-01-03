@@ -4,16 +4,17 @@ import HeadingAndCountryDetails from "@/components/HeadingAndCountryDetails";
 import NeighbourCountries from "@/components/NeighbourCountries";
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.min.js";
 import "@/public/Details.css";
+import { useSearchParams } from "next/navigation";
 
 function Details() {
-  const countrycca3code = window.location.search.slice(-3);
+  const SearchParams = useSearchParams();
+  const countrycca3code = SearchParams.get("country");
   const [country, setCountry] = useState("12");
   const [loaded, setLoaded] = useState(false);
-  //   let params = new URLSearchParams(document.location.search);
-  //   let countrycca3code = params.get("country");
+
   const url = `https://restcountries.com/v3.1/alpha/${countrycca3code}`;
+
   useEffect(() => {
     setLoaded(false);
     const fetchData = async () => {
@@ -27,7 +28,12 @@ function Details() {
       }
     };
     fetchData();
-  }, []);
+
+    // Load Bootstrap JavaScript on the client side
+    if (typeof window !== "undefined") {
+      require("bootstrap/dist/js/bootstrap.min.js");
+    }
+  }, [url]); // Added url as a dependency to the useEffect dependency array
 
   return (
     <>

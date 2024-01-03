@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 // import styles from "../src/app/page.module.css";
 import "@/public/Loader.css";

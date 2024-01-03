@@ -1,15 +1,15 @@
 "use client";
 
+import Link from "next/link";
 import React from "react";
-// import { Link } from "react-router-dom";
 
 function Flags({ searchTerm, setSearchTerm, data }) {
   function showMap(countryMap) {
     window.open(countryMap);
   }
-  function details(x) {
-    window.location.href = `CountryDetails?country=${x}`;
-  }
+  // function details(x) {
+  //   window.location.href = `/CountryDetails?country=${x}`;
+  // }
   function addOrdinalSuffix(day) {
     if (day >= 11 && day <= 13) {
       return `${day}th`;
@@ -135,20 +135,20 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                   >
                     <strong style={{ fontSize: "large" }}>Show Map</strong>
                   </button>
-                  <button
-                    onClick={() => details(cntry.cca3)}
+                  <Link
+                    // onClick={() => details(cntry.cca3)}
                     // to={{
                     //   pathname: "/CountryDetail",
                     //   search: `?country=${cntry.cca3}`,
                     // }}
 
-                    // href="/CountryDetails"
+                    href={`/CountryDetails?country=${cntry.cca3}`}
                     type="button"
                     className="btn btn-outline-primary col-5"
                     style={{ border: "3px solid blue", borderRadius: "2px" }}
                   >
                     <strong style={{ fontSize: "large" }}>Detail</strong>
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
