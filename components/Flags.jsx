@@ -51,15 +51,12 @@ function Flags({ searchTerm, setSearchTerm, data }) {
     );
     const dayWithSuffix = addOrdinalSuffix(localDateTime.getDate());
     let hours = localDateTime.getHours();
-    const amPm = hours >= 12 ? "PM" : "AM";
     hours = hours % 12 || 12;
-    const optionsTime = { hour: "numeric", minute: "numeric" };
-    const localTimeString = localDateTime.toLocaleTimeString(
-      undefined,
-      optionsTime
-    );
-
-    return `${dayWithSuffix} ${localDateString}, ${localTimeString} ${amPm}`;
+    const optionsTime = { hour: "numeric", minute: "numeric", hour12: true };
+    const localTimeString = localDateTime
+      .toLocaleTimeString(undefined, optionsTime)
+      .toUpperCase();
+    return `${dayWithSuffix} ${localDateString}, ${localTimeString}`;
   };
 
   function filterJson() {
