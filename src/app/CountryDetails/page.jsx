@@ -29,11 +29,10 @@ function Details() {
     };
     fetchData();
 
-    // Load Bootstrap JavaScript on the client side
     if (typeof window !== "undefined") {
       require("bootstrap/dist/js/bootstrap.min.js");
     }
-  }, [url]); // Added url as a dependency to the useEffect dependency array
+  }, [url]);
 
   return (
     <>

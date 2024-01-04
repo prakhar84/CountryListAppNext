@@ -27,7 +27,6 @@ function Index() {
     };
     fetchData();
 
-    // Load Bootstrap JavaScript on the client side
     if (typeof window !== "undefined") {
       require("bootstrap/dist/js/bootstrap.min.js");
     }

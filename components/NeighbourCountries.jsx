@@ -8,7 +8,6 @@ function NeighbourCountries({ country }) {
   const {
     name: { common },
     borders,
-    cca3,
   } = country;
   let temp = null;
   const [countries, setCountries] = useState("12");
@@ -28,7 +27,6 @@ function NeighbourCountries({ country }) {
     fetchData();
   }, []);
   const len = "borders" in country ? borders.length : 0;
-  // console.log(borders);
   if (len === 0) {
     return (
       <h1>

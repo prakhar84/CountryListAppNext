@@ -1,13 +1,11 @@
 "use client";
 
 import React from "react";
-import Hello from "./Hello";
-import Hi from "./Hi";
 import Image from "next/image";
 
 function HeadingAndCountryDetails({ country }) {
   const {
-    flags: { svg, png },
+    flags: { svg },
     name: { common },
     capital,
     population,
@@ -15,21 +13,11 @@ function HeadingAndCountryDetails({ country }) {
     subregion,
     area,
     idd: { root, suffixes },
-    languages,
-    currencies,
     timezones,
   } = country;
 
   return (
     <div className="upperbody container-fluid">
-      {/* <div className="title row justify-content-start">
-        <div className="col-lg-12 d-flex justify-content-start ">
-          <h1 id="heading" style={{ fontWeight: "700", fontSize: "45px" }}>
-            {common}
-          </h1>
-        </div>
-      </div> */}
-
       <div className="row imgandcontent">
         <h1 id="heading" style={{ fontWeight: "700", fontSize: "45px" }}>
           {common}

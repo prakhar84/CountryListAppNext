@@ -7,9 +7,6 @@ function Flags({ searchTerm, setSearchTerm, data }) {
   function showMap(countryMap) {
     window.open(countryMap);
   }
-  // function details(x) {
-  //   window.location.href = `/CountryDetails?country=${x}`;
-  // }
   function addOrdinalSuffix(day) {
     if (day >= 11 && day <= 13) {
       return `${day}th`;
@@ -64,6 +61,7 @@ function Flags({ searchTerm, setSearchTerm, data }) {
 
     return `${dayWithSuffix} ${localDateString}, ${localTimeString} ${amPm}`;
   };
+
   function filterJson() {
     if (searchTerm) {
       const filteredCountries = data.filter((country) =>
@@ -97,8 +95,6 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                 alt=""
                 height="50%"
                 width="100%"
-                // height="auto"
-                // width="100%"
                 style={{
                   minHeight: "100%",
                   display: "block",
@@ -115,11 +111,7 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                 >
                   {cntry.name.common}
                 </h1>
-                <h5
-                // style={{
-                //   padding: "0px ",
-                // }}
-                >
+                <h5>
                   Currency:{" "}
                   {"currencies" in cntry
                     ? cntry.currencies[Object.keys(cntry.currencies)[0]].name
@@ -136,12 +128,6 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                     <strong style={{ fontSize: "large" }}>Show Map</strong>
                   </button>
                   <Link
-                    // onClick={() => details(cntry.cca3)}
-                    // to={{
-                    //   pathname: "/CountryDetail",
-                    //   search: `?country=${cntry.cca3}`,
-                    // }}
-
                     href={`/CountryDetails?country=${cntry.cca3}`}
                     type="button"
                     className="btn btn-outline-primary col-5"
@@ -160,26 +146,3 @@ function Flags({ searchTerm, setSearchTerm, data }) {
 }
 
 export default Flags;
-
-// 3--1
-// 5--2
-// 7--3
-// 8--4
-
-// //         *
-// //     *   *
-// // *   *   *
-// // *eee*eee*
-// // *   *   *
-// //     *   *
-// //         *
-
-// //             *
-// //       *     *
-// // *     *     *
-// // *     *     *
-// // *eeeee*eeeee*
-// // *     *     *
-// // *     *     *
-// //       *     *
-// //             *

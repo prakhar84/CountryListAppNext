@@ -3,11 +3,9 @@
 import React from "react";
 import SearchImage from "@/public/search-interface-symbol.png";
 import Image from "next/image";
-// import searchInterfaceSymbol from "./../../public/search-interface-symbol.png";
 
 function SearchBar({ searchTerm, setSearchTerm }) {
   function handleSearchQuery(x) {
-    // console.log(x);
     setSearchTerm(x.toLowerCase());
   }
 
@@ -38,8 +36,6 @@ function SearchBar({ searchTerm, setSearchTerm }) {
           id="searchicon"
           width={30}
           height={30}
-          // height="30px"
-          // width="30px"
           style={{
             position: "absolute",
             top: "50%",
