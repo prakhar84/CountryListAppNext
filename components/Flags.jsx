@@ -126,7 +126,7 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                   </button>
                   <Link
                     href={{
-                      pathname: "/CountryDetails",
+                      pathname: "CountryDetails",
                       query: { country: `${cntry.cca3}` },
                     }}
                     type="button"
