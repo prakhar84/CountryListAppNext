@@ -129,11 +129,14 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                       pathname: "CountryDetails",
                       query: { country: `${cntry.cca3}` },
                     }}
-                    type="button"
-                    className="btn btn-outline-primary col-5"
-                    style={{ border: "3px solid blue", borderRadius: "2px" }}
+                    legacyBehavior
                   >
-                    <strong style={{ fontSize: "large" }}>Detail</strong>
+                    <a
+                      className="btn btn-outline-primary col-5"
+                      style={{ border: "3px solid blue", borderRadius: "2px" }}
+                    >
+                      <strong style={{ fontSize: "large" }}>Detail</strong>
+                    </a>
                   </Link>
                 </div>
               </div>
