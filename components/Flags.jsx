@@ -152,7 +152,7 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                   </a>
                   </Link> */}
 
-                  {/* <Link
+                  <Link
                     href={{
                       pathname: "CountryDetails",
                       query: { country: `${cntry.cca3}` },
@@ -161,15 +161,15 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                     style={{ border: "3px solid blue", borderRadius: "2px" }}
                   >
                     <strong style={{ fontSize: "large" }}>Detail</strong>
-                  </Link> */}
+                  </Link>
 
-                  <Link
+                  {/* <Link
                     href={`/CountryDetails?country=${cntry.cca3}`}
                     className="btn btn-outline-primary col-5"
                     style={{ border: "3px solid blue", borderRadius: "2px" }}
                   >
                     <strong style={{ fontSize: "large" }}>Detail</strong>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
