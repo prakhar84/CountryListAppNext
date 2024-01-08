@@ -139,7 +139,7 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                     href={`/CountryDetails?country=${cntry.cca3}`}
                     passHref
                     legacyBehavior
-                  > */}
+                  >
                   <a
                     className="btn btn-outline-primary col-5"
                     style={{ border: "3px solid blue", borderRadius: "2px" }}
@@ -150,21 +150,25 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                   >
                     <strong style={{ fontSize: "large" }}>Detail</strong>
                   </a>
-                  {/* </Link> */}
+                  </Link> */}
 
-                  {/* <Link
+                  <Link
                     href={{
                       pathname: "CountryDetails",
                       query: { country: `${cntry.cca3}` },
                     }}
-                    legacyBehavior
+                    className="btn btn-outline-primary col-5"
+                    style={{ border: "3px solid blue", borderRadius: "2px" }}
                   >
-                    <a
-                      className="btn btn-outline-primary col-5"
-                      style={{ border: "3px solid blue", borderRadius: "2px" }}
-                    >
-                      <strong style={{ fontSize: "large" }}>Detail</strong>
-                    </a>
+                    <strong style={{ fontSize: "large" }}>Detail</strong>
+                  </Link>
+
+                  {/* <Link
+                    href={`/CountryDetails?country=${cntry.cca3}`}
+                    className="btn btn-outline-primary col-5"
+                    style={{ border: "3px solid blue", borderRadius: "2px" }}
+                  >
+                    <strong style={{ fontSize: "large" }}>Detail</strong>
                   </Link> */}
                 </div>
               </div>
