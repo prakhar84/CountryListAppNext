@@ -125,7 +125,10 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                     <strong style={{ fontSize: "large" }}>Show Map</strong>
                   </button>
                   <Link
-                    href={`/CountryDetails?country=${cntry.cca3}`}
+                    href={{
+                      pathname: "/CountryDetails",
+                      query: { country: `${cntry.cca3}` },
+                    }}
                     type="button"
                     className="btn btn-outline-primary col-5"
                     style={{ border: "3px solid blue", borderRadius: "2px" }}
