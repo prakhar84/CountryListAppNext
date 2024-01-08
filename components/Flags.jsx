@@ -2,19 +2,8 @@
 
 import Link from "next/link";
 import React from "react";
-import { useRouter } from "next/navigation";
 
 function Flags({ searchTerm, setSearchTerm, data }) {
-  const router = useRouter();
-
-  // const handleClick = (event) => {
-  //   event.preventDefault();
-  //   // Your custom logic here
-  //   console.log("Link clicked, but default behavior prevented");
-  //   // You can navigate manually using the router
-  //   router.push("/CountryDetails?country=${}");
-  // };
-
   function showMap(countryMap) {
     window.open(countryMap);
   }
@@ -135,22 +124,6 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                   >
                     <strong style={{ fontSize: "large" }}>Show Map</strong>
                   </button>
-                  {/* <Link
-                    href={`/CountryDetails?country=${cntry.cca3}`}
-                    passHref
-                    legacyBehavior
-                  >
-                  <a
-                    className="btn btn-outline-primary col-5"
-                    style={{ border: "3px solid blue", borderRadius: "2px" }}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      router.push(`/CountryDetails?country=${cntry.cca3}`);
-                    }}
-                  >
-                    <strong style={{ fontSize: "large" }}>Detail</strong>
-                  </a>
-                  </Link> */}
 
                   <Link
                     href={{
@@ -162,14 +135,6 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                   >
                     <strong style={{ fontSize: "large" }}>Detail</strong>
                   </Link>
-
-                  {/* <Link
-                    href={`/CountryDetails?country=${cntry.cca3}`}
-                    className="btn btn-outline-primary col-5"
-                    style={{ border: "3px solid blue", borderRadius: "2px" }}
-                  >
-                    <strong style={{ fontSize: "large" }}>Detail</strong>
-                  </Link> */}
                 </div>
               </div>
             </div>
