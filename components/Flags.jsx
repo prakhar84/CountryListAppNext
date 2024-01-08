@@ -125,6 +125,19 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                     <strong style={{ fontSize: "large" }}>Show Map</strong>
                   </button>
                   <Link
+                    href={`/CountryDetails?country=${cntry.cca3}`}
+                    passHref
+                    legacyBehavior
+                  >
+                    <a
+                      className="btn btn-outline-primary col-5"
+                      style={{ border: "3px solid blue", borderRadius: "2px" }}
+                    >
+                      <strong style={{ fontSize: "large" }}>Detail</strong>
+                    </a>
+                  </Link>
+
+                  {/* <Link
                     href={{
                       pathname: "CountryDetails",
                       query: { country: `${cntry.cca3}` },
@@ -137,7 +150,7 @@ function Flags({ searchTerm, setSearchTerm, data }) {
                     >
                       <strong style={{ fontSize: "large" }}>Detail</strong>
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
